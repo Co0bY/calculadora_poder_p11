@@ -237,23 +237,23 @@
       if (soul) {
         switch (soullvl) {
           case 1:
-            soul = 10;
+            soul = parseFloat(10);
             break;
           case 2:
             extrapower = extrapower + 100;
-            soul = 10;
+            soul = parseFloat(10);
             break;
           case 3:
             extrapower = extrapower + 150;
-            soul = 15;
+            soul = parseFloat(15);
             break;
           case 4:
             extrapower = extrapower + 220;
-            soul = 20;
+            soul = parseFloat(20);
             break;
           case 5:
             extrapower = extrapower + 320;
-            soul = 25;
+            soul = parseFloat(25);
             break;
         }
       } else {
@@ -308,7 +308,7 @@
             break;
         }
       } else {
-        soul = 0;
+        primal = 0;
       }
 
       var soma =
@@ -324,7 +324,7 @@
 
       var power = (soma / 100) * (patt + tpbonus + extrapower + esp);
 
-      $("#result").val("Resultado: " + power.toFixed(2));
+      $("#result").val("Resultado: " + power.toFixed(0));
     });
   });
 </script>
