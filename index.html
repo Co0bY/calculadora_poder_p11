@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Calculadora poder P11</title>
+  </head>
+  <body>
+    <div class="container text-center justify-content-center">
+      <div class="row justify-content-center align-items-center g-2 mt-2">
+        <div class="col">
+          <h1>Calculadora de Poder</h1>
+          <h2>Lemonade Eleven</h2>
+        </div>
+      </div>
+      <br />
+      <div class="row justify-content-center align-items-center g-2 mt-2">
+        <div class="col">
+          <label class="form-label" for="dice"> Resultado do dado </label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Resultado do dado"
+            aria-label="dice-result"
+            id="dice"
+            max="10"
+            min="1"
+            value="1"
+          />
+        </div>
+        <div class="col">
+          <label class="form-label" for="character-atribute">
+            Atributo de Personagem
+          </label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Atributo de Personagem"
+            aria-label="character-atribute"
+            id="character-atribute"
+            value="0"
+          />
+        </div>
+        <div class="col">
+          <label class="form-label" for="player-atribute">
+            Atributo de jogador
+          </label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Atributo de jogador"
+            aria-label="player-atribute"
+            id="player-atribute"
+            value="0"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center align-items-center g-2 mt-2">
+        <div class="col">
+          <label class="form-label" for="tp-cost"> Custo de TP </label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Custo de TP"
+            aria-label="tp-cost"
+            id="tp-cost"
+            value="0"
+          />
+        </div>
+        <div class="col">
+          <label class="form-label" for="sab-mod"
+            >Modificador de Sabedoria"</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Modificador de Sabedoria"
+            aria-label="sab-mod"
+            id="sab-mod"
+            value="0"
+          />
+        </div>
+        <div class="col">
+          <label class="form-label" for="esp-mod">Espirito"</label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Espirito"
+            aria-label="esp-mod"
+            id="esp-mod"
+            value="0"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center align-items-center g-2 mt-2">
+        <label class="col btn btn-outline-primary">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="keshin"
+          />
+          <label class="form-check-label" for="keshin"> Keshin </label>
+        </label>
+        <label class="col btn btn-outline-primary">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Nível"
+            aria-label="soul-lvl"
+            id="soul-lvl"
+            value="1"
+            max="5"
+            min="1"
+          />
+          <input class="form-check-input" type="checkbox" value="" id="soul" />
+          <label class="form-check-label" for="soul"> Soul </label>
+        </label>
+        <label class="col btn btn-outline-primary">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="quebra"
+          />
+          <label class="form-check-label" for="quebra"> Quebra </label>
+        </label>
+      </div>
+
+      <div class="row justify-content-center align-items-center g-2 mt-2">
+        <label class="col btn btn-outline-primary">
+          <input class="form-check-input" type="checkbox" value="" id="armed" />
+          <label class="form-check-label" for="armed"> Armed </label>
+        </label>
+        <label class="col btn btn-outline-primary">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Nível"
+            aria-label="primal-lvl"
+            id="primal-lvl"
+            value="1"
+            max="6"
+            min="1"
+          />
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="primal"
+          />
+          <label class="form-check-label" for="primal"> Forma primal </label>
+        </label>
+      </div>
+
+      <div class="row justify-content-center align-items-center g-2 mt-2">
+        <div class="col">
+          <label class="form-label" for="extra-power"> Poder Extra </label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Poder Extra"
+            aria-label="extra-power"
+            id="extra-power"
+            value="0"
+          />
+        </div>
+        <div class="col">
+          <label class="form-label" for="extra-percentage"> % Extra </label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Poder Extra"
+            aria-label="extra-percentage"
+            id="extra-percentage"
+            value="0"
+          />
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center g-2 mt-2">
+        <button type="button" class="col-12 btn btn-primary" id="calcular">
+          Calcular
+        </button>
+      </div>
+
+      <div class="row justify-content-center align-items-center g-2 mt-2">
+        <div class="col">
+          <label class="form-label" for="result"> Resultado </label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Resultado"
+            aria-label="result"
+            id="result"
+            readonly
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    $("#calcular").click(function () {
+      var dice = parseFloat($("#dice").val()) || 0;
+      var catt = parseFloat($("#character-atribute").val()) || 0;
+      var sab = parseFloat($("#sab-mod").val()) || 0;
+      var esp = parseFloat($("#esp-mod").val()) || 0;
+
+      var extrapower = parseFloat($("#extra-power").val()) || 0;
+      var extrapercentage = parseFloat($("#extra-percentage").val()) || 0;
+
+      var patt = parseFloat($("#player-atribute").val()) || 0;
+      var tpbonus = parseFloat($("#tp-cos").val()) * 10 || 0;
+
+      var keshin = $("#keshin").is(":checked");
+
+      if (keshin) {
+        keshin = parseFloat(20);
+      } else {
+        keshin = 0;
+      }
+
+      var soul = $("#soul").is(":checked");
+
+      var soullvl = parseFloat($("#soul-lvl").val());
+      if (soul) {
+        switch (soullvl) {
+          case 1:
+            soul = 10;
+            break;
+          case 2:
+            extrapower = extrapower + 100;
+            soul = 10;
+            break;
+          case 3:
+            extrapower = extrapower + 150;
+            soul = 15;
+            break;
+          case 4:
+            extrapower = extrapower + 220;
+            soul = 20;
+            break;
+          case 5:
+            extrapower = extrapower + 320;
+            soul = 25;
+            break;
+        }
+      } else {
+        soul = 0;
+      }
+
+      var quebra = $("#quebra").is(":checked");
+
+      if (quebra) {
+        quebra = parseFloat(100);
+        extrapower = extrapower + 700;
+      } else {
+        quebra = 0;
+      }
+
+      var armed = $("#armed").is(":checked");
+
+      if (armed) {
+        armed = parseFloat(40);
+      } else {
+        armed = 0;
+      }
+
+      var primal = $("#primal").is(":checked");
+
+      var primallvl = parseFloat($("#primal-lvl").val());
+      if (primal) {
+        switch (primallvl) {
+          case 1:
+            extrapower = extrapower + 300;
+            primal = 30;
+            break;
+          case 2:
+            extrapower = extrapower + 350;
+            primal = 35;
+            break;
+          case 3:
+            extrapower = extrapower + 400;
+            primal = 40;
+            break;
+          case 4:
+            extrapower = extrapower + 450;
+            primal = 45;
+            break;
+          case 5:
+            extrapower = extrapower + 500;
+            primal = 50;
+            break;
+          case 6:
+            extrapower = extrapower + 550;
+            primal = 55;
+            break;
+        }
+      } else {
+        soul = 0;
+      }
+
+      var soma =
+        dice * 10 +
+        catt +
+        sab +
+        keshin +
+        soul +
+        quebra +
+        armed +
+        primal +
+        extrapercentage;
+
+      var power = (soma / 100) * (patt + tpbonus + extrapower + esp);
+
+      $("#result").val("Resultado: " + power.toFixed(2));
+    });
+  });
+</script>
